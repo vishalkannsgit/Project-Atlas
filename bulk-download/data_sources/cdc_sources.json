@@ -1,0 +1,37 @@
+[
+  {
+    "source": "cdc",
+    "url": "https://stacks.cdc.gov/view/cdc/164153/cdc_164153_DS1.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "stacks.cdc.gov",
+    "description": "CDC MMWR Vol 73 No 39 (Oct 2024)"
+  },
+  {
+    "source": "cdc",
+    "url": "https://stacks.cdc.gov/view/cdc/170560/cdc_170560_DS1.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "stacks.cdc.gov",
+    "description": "CDC MMWR Vol 73 No 46 (Nov 2024)"
+  },
+  {
+    "source": "cdc",
+    "url": "https://stacks.cdc.gov/view/cdc/157638/cdc_157638_DS1.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "stacks.cdc.gov",
+    "description": "CDC MMWR Vol 73 No 24 (Jun 2024)"
+  },
+  {
+    "source": "cdc",
+    "url": "https://stacks.cdc.gov/view/cdc/149774/cdc_149774_DS1.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "stacks.cdc.gov",
+    "description": "CDC MMWR 2023-2024 Week Log"
+  },
+  {
+    "source": "cdc",
+    "url": "https://stacks.cdc.gov/view/cdc/138834/cdc_138834_DS1.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "stacks.cdc.gov",
+    "description": "CDC MMWR Vol 72 No 30 (Jul 2023)"
+  }
+]

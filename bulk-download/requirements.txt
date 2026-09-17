@@ -1,0 +1,26 @@
+# ============================================================
+# Project Atlas — Bulk Download Service
+# ============================================================
+
+# HTTP client (async, streaming, connection pooling)
+aiohttp>=3.9.5
+aiofiles>=23.2.1
+
+# File type detection via magic bytes (requires libmagic system lib)
+python-magic>=0.4.27
+
+# Progress bars
+tqdm>=4.66.4
+
+# CLI argument parsing (stdlib, no install needed — listed for clarity)
+# argparse — stdlib
+
+# Retry / backoff (used internally, listed for reference)
+# asyncio — stdlib
+
+# ── Testing ──────────────────────────────────────────────────
+pytest>=8.2.0
+pytest-asyncio>=0.23.7
+
+# Optional: nicer test output
+pytest-sugar>=1.0.0

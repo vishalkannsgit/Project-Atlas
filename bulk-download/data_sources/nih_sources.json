@@ -1,0 +1,37 @@
+[
+  {
+    "source": "nih",
+    "url": "https://www.nhlbi.nih.gov/files/docs/guidelines/jnc7full.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "nhlbi.nih.gov",
+    "description": "NIH JNC 7 Complete Report on Hypertension (confirmed working)"
+  },
+  {
+    "source": "nih",
+    "url": "https://www.nhlbi.nih.gov/files/docs/guidelines/obesity_guidelines_archive.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "nhlbi.nih.gov",
+    "description": "NIH NHLBI Obesity Guidelines Archive (confirmed working)"
+  },
+  {
+    "source": "nih",
+    "url": "https://stacks.cdc.gov/view/cdc/112438/cdc_112438_DS1.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "stacks.cdc.gov",
+    "description": "CDC MMWR Vol 70 No 25 (Jun 2021)"
+  },
+  {
+    "source": "nih",
+    "url": "https://www.fda.gov/media/76418/download",
+    "document_type": "pdf",
+    "allowed_domain": "fda.gov",
+    "description": "FDA Electronic Source Data Guidance (confirmed working)"
+  },
+  {
+    "source": "nih",
+    "url": "https://www.fda.gov/media/78212/download",
+    "document_type": "pdf",
+    "allowed_domain": "fda.gov",
+    "description": "FDA Dosage Optimization Guidance (confirmed working)"
+  }
+]

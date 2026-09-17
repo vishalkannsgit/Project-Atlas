@@ -1,0 +1,37 @@
+[
+  {
+    "source": "who",
+    "url": "https://www.fda.gov/media/76418/download",
+    "document_type": "pdf",
+    "allowed_domain": "fda.gov",
+    "description": "FDA — Guidance for Industry: Electronic Source Data (reclassified under who/govt sources)"
+  },
+  {
+    "source": "who",
+    "url": "https://www.fda.gov/media/82395/download",
+    "document_type": "pdf",
+    "allowed_domain": "fda.gov",
+    "description": "FDA — Guidance: Patient-Focused Drug Development"
+  },
+  {
+    "source": "who",
+    "url": "https://www.fda.gov/media/78212/download",
+    "document_type": "pdf",
+    "allowed_domain": "fda.gov",
+    "description": "FDA — Guidance: Optimizing the Dosage of Human Prescription Drugs"
+  },
+  {
+    "source": "who",
+    "url": "https://stacks.cdc.gov/view/cdc/124784/cdc_124784_DS1.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "stacks.cdc.gov",
+    "description": "CDC MMWR Vol 71 No 11 (Mar 2022)"
+  },
+  {
+    "source": "who",
+    "url": "https://stacks.cdc.gov/view/cdc/116522/cdc_116522_DS1.pdf",
+    "document_type": "pdf",
+    "allowed_domain": "stacks.cdc.gov",
+    "description": "CDC MMWR Vol 70 No 48 (Dec 2021)"
+  }
+]
