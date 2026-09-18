@@ -1,13 +1,13 @@
 from prometheus_client import Counter, Histogram
 
-UPLOAD_COUNT = Counter(
-    "pdf_uploads_total",
-    "Total count of PDF upload attempts",
-    ["tenant_id", "status"]
+UPLOAD_COUNTER = Counter(
+    "manual_onboarding_uploads_total",
+    "Total document upload attempts partitioned by status, tenant, and format",
+    ["status", "tenant", "format"],
 )
 
-UPLOAD_LATENCY = Histogram(
-    "pdf_upload_duration_seconds",
-    "Time taken to process and store PDF uploads",
-    buckets=[0.1, 0.5, 1.0, 2.0, 5.0, 10.0]
+UPLOAD_LATENCY_SECONDS = Histogram(
+    "manual_onboarding_upload_duration_seconds",
+    "Time taken to validate, hash, persist, and register document upload",
+    buckets=[0.05, 0.1, 0.25, 0.5, 1.0, 2.5, 5.0, 10.0],
 )

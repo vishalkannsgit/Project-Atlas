@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+.venv/
+env/
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+
+# Local Databases & Uploads
+data/
+storage_uploads/
+*.db
+*.sqlite3
+
+# Docker & OS artifacts
+.DS_Store
+Thumbs.db

@@ -73,9 +73,10 @@ services:
       - KAFKA_BOOTSTRAP_SERVERS=redpanda:9092
       - KAFKA_TOPIC_RAW_INGEST=ingest.raw
       - KAFKA_ENABLED=True
-      - DATABASE_URL=sqlite+aiosqlite:////app/atlas_documents.db
+      - DATABASE_URL=sqlite+aiosqlite:////app/data/atlas_documents.db
+      - CLAMAV_ENABLED=False
     volumes:
-      - ./atlas_documents.db:/app/atlas_documents.db
+      - ./data:/app/data
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/healthz"]

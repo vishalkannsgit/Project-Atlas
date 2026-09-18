@@ -1,38 +1,34 @@
-import enum
+import uuid
 from datetime import datetime, timezone
-from sqlalchemy import Column, String, Integer, DateTime, Enum, JSON
+from sqlalchemy import String, Integer, DateTime, JSON
+from sqlalchemy.orm import Mapped, mapped_column
 from app.core.database import Base
 
-class DocumentStatus(str, enum.Enum):
-    QUEUED = "QUEUED"
-    PROCESSING = "PROCESSING"
-    COMPLETED = "COMPLETED"
-    FAILED = "FAILED"
 
 class Document(Base):
     __tablename__ = "documents"
 
-    # Primary identifier (UUID)
-    id = Column(String(36), primary_key=True, index=True)
-    
-    # Multi-tenancy and tracking
-    tenant_id = Column(String(64), nullable=False, index=True)
-    idempotency_key = Column(String(64), nullable=True, index=True)
-    
-    # File specifications
-    original_filename = Column(String(255), nullable=False)
-    file_size_bytes = Column(Integer, nullable=False)
-    sha256_hash = Column(String(64), nullable=False, index=True)
-    mime_type = Column(String(64), nullable=False, default="application/pdf")
-    
-    # Storage URI (e.g., s3://bucket/path.pdf or file:///local/path.pdf)
-    storage_uri = Column(String(512), nullable=False)
-    
-    # Processing status and domain-agnostic metadata
-    status = Column(Enum(DocumentStatus), default=DocumentStatus.QUEUED, nullable=False)
-    metadata_payload = Column(JSON, nullable=True)
-    error_message = Column(String(1024), nullable=True)
-    
-    # Timestamps
-    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
-    updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
+    id: Mapped[str] = mapped_column(
+        String(36), primary_key=True, default=lambda: str(uuid.uuid4())
+    )
+    tenant_id: Mapped[str] = mapped_column(String(64), index=True, nullable=False)
+    idempotency_key: Mapped[str] = mapped_column(String(128), nullable=True)
+    filename: Mapped[str] = mapped_column(String(255), nullable=False)
+    sha256_hash: Mapped[str] = mapped_column(String(64), index=True, nullable=False)
+    file_size_bytes: Mapped[int] = mapped_column(Integer, nullable=False)
+    file_format: Mapped[str] = mapped_column(String(16), nullable=False)
+    mime_type: Mapped[str] = mapped_column(String(128), nullable=False)
+    storage_uri: Mapped[str] = mapped_column(String(512), nullable=False)
+    status: Mapped[str] = mapped_column(String(32), default="PENDING", nullable=False)
+    metadata_json: Mapped[dict] = mapped_column(JSON, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        default=lambda: datetime.now(timezone.utc),
+        nullable=False,
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        default=lambda: datetime.now(timezone.utc),
+        onupdate=lambda: datetime.now(timezone.utc),
+        nullable=False,
+    )

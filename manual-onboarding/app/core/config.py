@@ -19,5 +19,14 @@ class Settings(BaseSettings):
     KAFKA_ENABLED: bool = False
     MAX_FILE_SIZE_BYTES: int = 50 * 1024 * 1024
     ALLOWED_MIME_TYPES: list[str] = ["application/pdf"]
+    # Antivirus / Malware Scanner
+    CLAMAV_ENABLED: bool = False
+    CLAMAV_HOST: str = "localhost"
+    CLAMAV_PORT: int = 3310
+    SCANNER_TIMEOUT_SECONDS: float = 5.0
+    # ZIP Ingestion & Security Thresholds
+    ZIP_MAX_FILES: int = 100
+    ZIP_MAX_UNCOMPRESSED_BYTES: int = 104857600  # 100 MB aggregate limit
+    ZIP_MAX_COMPRESSION_RATIO: float = 100.0     # Reject suspected zip bombs
 
 settings = Settings()
