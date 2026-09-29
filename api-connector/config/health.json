@@ -1,0 +1,13 @@
+{
+  "pubmed": {
+    "last_run_status": "success",
+    "last_run_at": "2026-09-29T06:05:01.012654",
+    "last_success_at": "2026-09-29T06:05:01.012654",
+    "last_error": null
+  },
+  "nih": {
+    "last_run_status": "failed",
+    "last_run_at": "2026-09-29T06:05:01.017596",
+    "last_error": "Connection timed out"
+  }
+}

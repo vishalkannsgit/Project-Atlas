@@ -1,0 +1,12 @@
+# Never commit real secrets
+.env
+
+# Virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Logs
+logs/*.log
